@@ -1,3 +1,5 @@
+# Fuel DSL
+
 declare do
   frame 0
   titre <<-EOH           
@@ -62,9 +64,18 @@ declare do
           |.'
    EOF
 end
- 
+
+music :battle do
+  channel "string" do
+    g   :dotted
+    g   :eighth
+    c   :half
+  end
+end
+
 scene do
   sprite 'titre'
+  play :battle
   main_loop <<-EOH
     star.x = 0
     star.y += 5
@@ -74,6 +85,7 @@ scene do
 end
 
 scene :fin do 
+  stop
   label 'Game over !', 4, 5
   color :text, :red
 end 
