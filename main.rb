@@ -19,9 +19,16 @@ declare do
 end
  
 scene do
+  sprite 'star'
   main_loop <<-EOH
     star.x = 0
-    star.y = 0
-    sprite 'star'
+    star.y += 5
+    frame += 1
+    goto :fin if frame == 1000
   EOH
 end
+
+scene :fin do 
+  label 'Game over !', 4, 5
+  color :text, :red
+end 
