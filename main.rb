@@ -1,4 +1,5 @@
 declare do
+  frame 0
   star <<-EOH           
        11      
        11      
