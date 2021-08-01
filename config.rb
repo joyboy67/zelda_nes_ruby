@@ -1,3 +1,5 @@
+#FUEL Dsl
+
 config :app do
   target :telnet
   width 80
